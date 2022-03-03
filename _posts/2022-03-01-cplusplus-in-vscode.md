@@ -124,11 +124,12 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "files.autoSave": "afterDelay",
-  /* Tại dòng code phía dưới, các bạn sửa đường dẫn thành vị trí lưu mingw của bạn */
+  // Tại dòng code phía dưới, các bạn sửa đường dẫn thành vị trí lưu mingw của bạn
   "C_Cpp.default.compilerPath": "D:\\bin\\mingw64\\bin\\g++.exe",
-  /* sửa dòng code phía trên */
+  // sửa dòng code phía trên
   "C_Cpp.default.cppStandard": "gnu++17",
-  "C_Cpp.default.cStandard": "gnu17",
+  "C_Cpp.default.cStandard": "gnu11",
+  // Nếu bạn sử dụng Linux, sửa dòng bên dưới thành: linux-gcc-x64
   "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
@@ -140,4 +141,4 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
 
 
 Các đường dẫn tham khảo ngoài:
-- Phím tắt VSCode:  
+- Phím tắt VSCode: https://www.facebook.com/clubproptit/posts/4542934582495170
