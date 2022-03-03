@@ -10,7 +10,8 @@ categories: basic
 1. [Cài đặt trình biên dịch GCC](#setup-environment)
     1. [Windows](#env-windows)
     2. [Linux Distros](#env-linux)
-2. [Cài đặt và thiết lập Visual Studio Code]()
+2. [Cài đặt và và chương trình C đầu tiên](#setup-vscode)
+3. [Tuỳ chỉnh lại một chút cho vscode](#config-vscode)
 
 # Step 1: Cài đặt trình biên dịch GCC <a id = "setup-environment"></a>
 
@@ -22,16 +23,16 @@ categories: basic
 
 - Chuột phải vào file tải về, chọn **Extract File**, sau đó chọn vị trí mà bạn muốn lưu thư mục mingw64
 
-*Giải nén thư mục tải về*
+- *Giải nén thư mục tải về*
 <br />
 ![mingw_setup_1](/images/cpp-vscode/mingw_setup_1.png)
 
-*Chọn vị trí muốn cài đặt - ở đây mình chọn* 
-**D:\bin**
+- *Chọn vị trí muốn cài đặt - ở đây mình chọn* 
+`D:\bin`
 <br />
 ![mingw_setup_2](/images/cpp-vscode/mingw_setup_2.png)
 
-*Kết quả:*
+- *Kết quả:*
 <br />
 ![mingw_setup_3](/images/cpp-vscode/mingw_setup_3.png)
 
@@ -45,11 +46,11 @@ categories: basic
 <br />
 ![environment_4](/images/cpp-vscode/environment_4.jpg)
 
-- Bước cuối cùng để kiểm tra bạn đã làm đúng các bước trên, nhấn Window - R, điền cmd, sau đó nhập vào:
+- Bước cuối cùng để kiểm tra bạn đã làm đúng các bước trên, nhấn `Window - R`, điền `cmd`, sau đó nhập vào:
 ```bash
 g++ --version
 ```
-Nó hiện vậy là oke:
+- Nó hiện vậy là oke:
 ```
 C:\Users\mycomputer>g++ --version
 g++ (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
@@ -71,9 +72,72 @@ g++ --version
 sudo apt-get install gcc g++
 ```
 
-# Step 2: Cài đặt và thiết lập Visual Studio Code:
+# Step 2: Cài đặt và chương trình C đầu tiên: <a id = "setup-vscode"> </a>
 > Yêu cầu tải về: [Visual Studio Code](https://code.visualstudio.com/)
 
-Ấn next và next thôi :D
+- Ấn next và next thôi :D
 
-... còn nữa
+- Sau khi cài xong mọi người sẽ có giao diện như vậy:
+
+![gettingstaterd](/images/cpp-vscode/getting_started.jpg)
+
+- Bước tiếp theo mọi người cần làm là
+    - Chọn tab **Extension** nằm ở thanh dock bên trái
+    - Tìm **C/C++** và **Code Runner** sau đó **Install**
+
+![extension](/images/cpp-vscode/extension.jpg)
+- Oke chúng ta đã có thể viết chương trình đầu tiên được rồi, bạn nhấn vào tab **Folder** nằm ở thanh dock, sau đó click **Open Folder**
+
+    > Bạn có thể tạo mới một folder, hoặc sử dụng folder đã sẵn có. Mình khuyến khích các bạn nên sử dụng Open Folder thay vì Open File riêng lẻ vì sẽ có một số trường hợp vscode sẽ không hoạt động đối với Open File
+
+![folder](/images/cpp-vscode/open_folder.jpg)
+
+- Oke giờ thì tạo một file mới:
+
+![file](/images/cpp-vscode/new-file.jpg)
+
+- Viết Hello World và chạy:
+
+![hello](/images/cpp-vscode/hello_world.jpg)
+
+- Kết quả:
+
+![build](/images/cpp-vscode/run_successfully.jpg)
+
+# Step 3: Tuỳ chỉnh một chút cho vscode <a id = "config-vscode"> </a>
+
+Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên để cải thiện trải nghiệm mình muốn chỉnh sửa một chút để quen với workflow của mình hơn. Đây là file config của mình để các bạn tham khảo, các bạn có thể tự viết tuỳ chỉnh cho mình:
+
+- Mở file config:
+    - Nhấn `F1`, sau đó tìm `Open Setting (JSON)`
+    
+![config_search](/images/cpp-vscode/config.jpg)
+    - Sau đó dán vào config phía dưới:
+```json
+// My VSCODE Config
+{
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.preserveFocus": false,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "files.autoSave": "afterDelay",
+  /* Tại dòng code phía dưới, các bạn sửa đường dẫn thành vị trí lưu mingw của bạn */
+  "C_Cpp.default.compilerPath": "D:\\bin\\mingw64\\bin\\g++.exe",
+  /* sửa dòng code phía trên */
+  "C_Cpp.default.cppStandard": "gnu++17",
+  "C_Cpp.default.cStandard": "gnu17",
+  "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+}
+```
+
+> Tips: Các bạn có thể chỉnh sửa ở giao diện thân thiện hơn bằng cách ở bước tìm kiếm, chọn `Open Setting (UI)`. Tuy nhiên thì setting khá nhiều và bạn sẽ cần phải tìm chức năng của một config nào đó trên internet.
+
+
+Các đường dẫn tham khảo ngoài:
+- Phím tắt VSCode:  
