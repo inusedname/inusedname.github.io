@@ -21,7 +21,7 @@
 title: VanSuTuyDuyen
 email: ngueynvquang1611@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  We're developer.
+  We're developers.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  inusedname
@@ -38,6 +38,11 @@ defaults:
       path: ""
     values:
       layout: post
+comments:
+  provider: giscus
+giscus:
+  repo: inusedname/inusedname.github.io
+  repo-id: 
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

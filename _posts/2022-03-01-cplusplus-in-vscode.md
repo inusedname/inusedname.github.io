@@ -141,4 +141,4 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
 
 
 Các đường dẫn tham khảo ngoài:
-- Phím tắt VSCode: https://www.facebook.com/clubproptit/posts/4542934582495170
+- Phím tắt VSCode: [https://www.facebook.com/clubproptit/posts/4542934582495170](https://www.facebook.com/clubproptit/posts/4542934582495170)
