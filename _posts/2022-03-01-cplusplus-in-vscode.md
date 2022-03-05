@@ -44,10 +44,12 @@ categories: basic
 ![environment_4](/images/cpp-vscode/environment_4.jpg)
 
 - Bước cuối cùng để kiểm tra bạn đã làm đúng các bước trên, nhấn `Window - R`, điền `cmd`, sau đó nhập vào:
+
 ```bash
 g++ --version
 ```
 - Nó hiện vậy là oke:
+
 ```
 C:\Users\mycomputer>g++ --version
 g++ (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
@@ -104,6 +106,7 @@ sudo apt-get install gcc g++
     }
     ```
     
+<br>
 ![hello](/images/cpp-vscode/hello_world.jpg)
 
 - Kết quả:
@@ -118,7 +121,8 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
     - Nhấn `F1`, sau đó tìm `Open Setting (JSON)`
     
 ![config_search](/images/cpp-vscode/config.jpg)
-    - Sau đó dán vào config phía dưới:
+    
+- Sau đó dán vào config phía dưới:
 
 ```js
 {%- raw -%}
