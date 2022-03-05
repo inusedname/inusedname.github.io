@@ -23,18 +23,15 @@ categories: basic
 
 - Chuột phải vào file tải về, chọn **Extract File**, sau đó chọn vị trí mà bạn muốn lưu thư mục mingw64
 
-- *Giải nén thư mục tải về*
-<br />
-![mingw_setup_1](/images/cpp-vscode/mingw_setup_1.png)
-
-- *Chọn vị trí muốn cài đặt - ở đây mình chọn* 
-`D:\bin`
-<br />
-![mingw_setup_2](/images/cpp-vscode/mingw_setup_2.png)
-
-- *Kết quả:*
-<br />
-![mingw_setup_3](/images/cpp-vscode/mingw_setup_3.png)
+|![mingw_setup_1](/images/cpp-vscode/mingw_setup_1.png)|
+|:--:|
+|*Giải nén thư mục tải về*|
+|![mingw_setup_2](/images/cpp-vscode/mingw_setup_2.png)|
+|:--:|
+|*Chọn vị trí muốn cài đặt - ở đây mình chọn* `D:\bin`|
+|![mingw_setup_3](/images/cpp-vscode/mingw_setup_3.png)|
+|:--:|
+|*Kết quả:*|
 
 - Bước tiếp theo các bạn cần phải nói cho máy tính của mình biết bộ dịch này được tải về rồi và nó ở chỗ nào, bằng cách thêm nó vào **Environment Variables**:
 
@@ -98,6 +95,15 @@ sudo apt-get install gcc g++
 
 - Viết Hello World và chạy:
 
+    ```c++
+    #include <stdio.h>
+    int main()
+    {
+        printf("Hello World");
+        return 0;
+    }
+    ```
+    
 ![hello](/images/cpp-vscode/hello_world.jpg)
 
 - Kết quả:
@@ -113,7 +119,9 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
     
 ![config_search](/images/cpp-vscode/config.jpg)
     - Sau đó dán vào config phía dưới:
-```json
+
+```js
+{%- raw -%}
 // My VSCODE Config
 {
   "code-runner.runInTerminal": true,
@@ -124,7 +132,7 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "files.autoSave": "afterDelay",
-  // Tại dòng code phía dưới, các bạn sửa đường dẫn thành vị trí lưu mingw của bạn
+  // Sửa dòng bên dưới thành vị trí lưu mingw của bạn
   "C_Cpp.default.compilerPath": "D:\\bin\\mingw64\\bin\\g++.exe",
   // sửa dòng code phía trên
   "C_Cpp.default.cppStandard": "gnu++17",
@@ -135,8 +143,8 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
 }
+{% endraw %}
 ```
-
 > Tips: Các bạn có thể chỉnh sửa ở giao diện thân thiện hơn bằng cách ở bước tìm kiếm, chọn `Open Setting (UI)`. Tuy nhiên thì setting khá nhiều và bạn sẽ cần phải tìm chức năng của một config nào đó trên internet.
 
 

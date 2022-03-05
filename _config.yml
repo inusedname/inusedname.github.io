@@ -33,7 +33,8 @@ minima:
     linkedin: quangnviet
     youtube_channel: UCCBSKK8JUK2ME-GwBIlNdSg
     youtube_channel_name: Nguyen Viet Quang
-google_analytics: G-8YTT8858SW
+  skin: myskin
+# google_analytics: G-8YTT8858SW
 # Build settings
 theme: minima
 plugins:

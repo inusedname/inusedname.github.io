@@ -10,7 +10,7 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
-
+  text-decoration: none;
 }
 
 
@@ -64,8 +64,11 @@ main {
  * Images
  */
 img {
-  max-width: 100%;
-  vertical-align: middle;
+  max-width: 750px;
+  // vertical-align: middle;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -121,7 +124,7 @@ a {
 
   &:hover {
     color: $link-hover-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .social-media-list &:hover {
@@ -138,11 +141,12 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $brand-color;
-  border-left: 4px solid $border-color-01;
+  color: $text-color;
+  border-left: 2px solid $border-color-02;
+  font-style: italic;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
-  font-style: italic;
+  // font-style: italic;
 
   > :last-child {
     margin-bottom: 0;
@@ -163,12 +167,12 @@ code {
   font-family: $code-font-family;
   font-size: 0.9375em;
   border: 1px solid $border-color-01;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color: $code-background-color;
 }
 
 code {
-  padding: 1px 5px;
+  padding: 2px 5px;
 }
 
 pre {
@@ -183,7 +187,7 @@ pre {
 }
 
 .highlight {
-  border-radius: 3px;
+  border-radius: 7px;
   background: $code-background-color;
   @extend %vertical-rhythm;
 
