@@ -36,11 +36,11 @@ minima:
   skin: myskin
 # google_analytics: G-8YTT8858SW
 # Build settings
-remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-remote-theme
+remote_theme: jekyll/minima
 defaults:
   - 
     scope:
