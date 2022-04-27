@@ -128,24 +128,48 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
 {%- raw -%}
 // My VSCODE Config
 {
+  // Code Runner Configs
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.preserveFocus": false,
-  "terminal.integrated.tabs.enabled": false,
-  "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.tabs.focusMode": "singleClick",
-  "files.autoSave": "afterDelay",
-  // Sửa dòng bên dưới thành vị trí lưu mingw của bạn
-  "C_Cpp.default.compilerPath": "D:\\bin\\mingw64\\bin\\g++.exe",
-  // sửa dòng code phía trên
-  "C_Cpp.default.cppStandard": "gnu++17",
-  "C_Cpp.default.cStandard": "gnu11",
-  // Nếu bạn sử dụng Linux, sửa dòng bên dưới thành: linux-gcc-x64
-  "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+  // CPH Configs
+  "cph.general.autoShowJudge": false,
+  // Editor Configs
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
+  "explorer.confirmDelete": false,
+  "files.autoSave": "afterDelay",
+  "workbench.statusBar.visible": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "Source Code Pro",
+  // Other
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  // Themes
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Default Dark+",
+  // C/C++ Configs
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.cStandard": "gnu11",
+  "C_Cpp.default.cppStandard": "gnu++17",
+  "C_Cpp.default.compilerPath": "D:\\bin\\msys64\\mingw64\\bin\\g++.exe",
+  // Other Languages
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.zoomLevel": 1,
 }
 {% endraw %}
 ```
