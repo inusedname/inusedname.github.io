@@ -1,17 +1,19 @@
 ---
 layout: post
 title: Hướng dẫn cài đặt C++ cho Visual Studio Code (Windows và Linux)
-date: 2022-03-01
+date: 2022-05-30
 permalink: /gcc-vscode/
 categories: basic
 ---
 
-## Mục lục:
-1. [Cài đặt trình biên dịch GCC](#setup-environment)
-    1. [Windows](#env-windows)
-    2. [Linux Distros](#env-linux)
-2. [Cài đặt và và chương trình C đầu tiên](#setup-vscode)
-3. [Tuỳ chỉnh lại một chút cho vscode](#config-vscode)
+***Bài viết được cập nhật 30/05/2022***
+> ## Mục lục:
+> 1. [Cài đặt trình biên dịch GCC](#setup-environment)
+>    1. [Windows](#env-windows)
+>    2. [Linux Distros](#env-linux)
+>2. [Cài đặt và và chương trình C đầu tiên](#setup-vscode)
+>3. [Tuỳ chỉnh lại một chút cho vscode](#config-vscode)
+>4. [Nâng cao: Debug cơ bản](#debug)
 
 # Step 1: Cài đặt trình biên dịch GCC <a id = "setup-environment"></a>
 
@@ -33,7 +35,7 @@ categories: basic
 |:--:|
 |*Kết quả:*|
 
-- Bước tiếp theo các bạn cần phải nói cho máy tính của mình biết bộ dịch này được tải về rồi và nó ở chỗ nào, bằng cách thêm nó vào **Environment Variables**:
+- Bước tiếp theo các bạn cần báo cho máy tính của mình biết bộ dịch này được tải về rồi và nó ở chỗ nào, bằng cách thêm nó vào **Environment Variables**:
 
 ![environment_1](/images/cpp-vscode/environment_1.jpg)
 <br />
@@ -126,35 +128,47 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
 
 ```js
 {%- raw -%}
-// My VSCODE Config
+// VanSu's Config
 {
   // Code Runner Configs
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.preserveFocus": false,
-  // CPH Configs
   "cph.general.autoShowJudge": false,
+
   // Editor Configs
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
-  "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "right",
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.tabs.enabled": false,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.tabs.focusMode": "singleClick",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontFamily": "Source Code Pro",
+  "workbench.startupEditor": "none",
+
   // Other
   "git.autofetch": true,
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": true,
-  // Themes
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.colorTheme": "Default Dark+",
+  "security.workspace.trust.untrustedFiles": "open",
+
+  /**
+   * Themes của mình
+   * Bạn tự cài theo sở thích riêng
+   * Hoặc bỏ comment đoạn config của mình và dùng ✌️
+   * Nhớ cài plugin: Fluent Icons, font chữ Firacode NF nhé
+   */
+
+  // "workbench.productIconTheme": "fluent-icons", 
+  // "terminal.integrated.fontFamily": "Firacode NF Retina",
+  // "workbench.colorTheme": "Visual Studio Light",
+  // "window.zoomLevel": 1,
+
   // C/C++ Configs
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -162,19 +176,46 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.default.cStandard": "gnu11",
+  "C_Cpp.default.cStandard": "gnu99",
   "C_Cpp.default.cppStandard": "gnu++17",
-  "C_Cpp.default.compilerPath": "D:\\bin\\msys64\\mingw64\\bin\\g++.exe",
+  "C_Cpp.default.compilerPath": "D:\\bin\\msys2\\mingw64\\bin\\g++.exe",
+
   // Other Languages
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "window.zoomLevel": 1,
 }
 {% endraw %}
 ```
 > Tips: Các bạn có thể chỉnh sửa ở giao diện thân thiện hơn bằng cách ở bước tìm kiếm, chọn `Open Setting (UI)`. Tuy nhiên thì setting khá nhiều và bạn sẽ cần phải tìm chức năng của một config nào đó trên internet.
 
+# Step 4: Debug C++ với VSCODE: <a id = "debug"> </a>
+Bắt tay vào làm luôn thui :3
 
-Các đường dẫn tham khảo ngoài:
+* Thêm breakpoint
+>**Breapoint là gì ?**\
+>Breakpoint là điểm mà khi code chạy tới đấy thì chương trình dừng lại. Vậy thôi ✌️
+
+![addbreakpoint](/images/cpp-vscode/addbreakpoint.jpg)
+* Vào mode debug
+
+![debuglaunch](/images/cpp-vscode/clickondebug.jpg)
+* Ở đây nó sẽ hiện ra một cái box bên trên, bạn click vào cái g++ nhé
+
+![debugrequire](/images/cpp-vscode/debugrequire.jpg)
+* Ảo ma canada!
+
+![debugrequire](/images/cpp-vscode/debugfirstsee.jpg)
+* Đây là chương trình Hello World thôi, thế nếu chương trình yêu cầu nhập vào từ bàn phím thì làm thế nào ? Dễ thôi 💯
+
+![debugrequire](/images/cpp-vscode/debuglaunch.jpg)
+* Okay, thế giờ muốn stop lại thì làm thế nào nhỉ ✌️, giới thiệu với mọi người thanh điều hướng trong debug nhé
+
+![debugrequire](/images/cpp-vscode/debugcontroller.jpg)
+* Debug thực sự rất tiện dành cho người mới học, tuy nhiên post này không đi sâu vào debug, nên mọi người tự tìm hiểu nhé 😄
+[Đây nhá!!!](https://viblo.asia/p/huong-dan-debug-danh-cho-nguoi-moi-eclipse-visual-studio-OeVKBWpYZkW)\
+
+
+**Các đường dẫn bổ sung:**
 - Phím tắt VSCode: [https://www.facebook.com/clubproptit/posts/4542934582495170](https://www.facebook.com/clubproptit/posts/4542934582495170)
+- Snippet VSCode: [https://www.facebook.com/clubproptit/posts/4804423199679639](https://www.facebook.com/clubproptit/posts/4804423199679639)
