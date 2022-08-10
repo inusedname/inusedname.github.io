@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Hướng dẫn cài đặt C++ cho Visual Studio Code (Windows và Linux)
-date: 2022-05-30
+title: Cài đặt môi trường C++ cho Visual Studio Code (Windows/Linux)
+date: 2022-03-01
 permalink: /gcc-vscode/
-categories: basic
+categories: setup, basic
 ---
 
-***Bài viết được cập nhật 30/05/2022***
+***Bài viết được cập nhật 10/08/2022***
 > ## Mục lục:
 > 1. [Cài đặt trình biên dịch GCC](#setup-environment)
 >    1. [Windows](#env-windows)
@@ -87,7 +87,7 @@ sudo apt-get install gcc g++
     - Tìm **C/C++** và **Code Runner** sau đó **Install**
 
 ![extension](/images/cpp-vscode/extension.jpg)
-- Oke chúng ta đã có thể viết chương trình đầu tiên được rồi, bạn nhấn vào tab **Folder** nằm ở thanh dock, sau đó click **Open Folder**
+- Bắt đầu viết code thôi. Chúng ta nhấn vào tab **Folder** nằm ở thanh dock trái, sau đó click **Open Folder**
 
     > Bạn có thể tạo mới một folder, hoặc sử dụng folder đã sẵn có. Mình khuyến khích các bạn nên sử dụng Open Folder thay vì Open File riêng lẻ vì sẽ có một số trường hợp vscode sẽ không hoạt động đối với Open File
 
@@ -109,7 +109,7 @@ sudo apt-get install gcc g++
     ```
     
 <br>
-![hello](/images/cpp-vscode/hello_world.jpg)
+![](/images/cpp-vscode/hello_world.jpg)
 
 - Kết quả:
 
@@ -117,7 +117,7 @@ sudo apt-get install gcc g++
 
 # Step 3: Tuỳ chỉnh một chút cho vscode <a id = "config-vscode"> </a>
 
-Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên để cải thiện trải nghiệm mình muốn chỉnh sửa một chút để quen với workflow của mình hơn. Đây là file config của mình để các bạn tham khảo, các bạn có thể tự viết tuỳ chỉnh cho mình:
+Từ bây giờ chúng ta dùng Visual Studio Code để code C++ vô tư rồi, tuy nhiên để cải thiện trải nghiệm mình muốn chỉnh sửa một chút để quen với workflow của mình hơn. Đây là file config của mình để các bạn tham khảo, các bạn có thể tự viết tuỳ chỉnh cho mình:
 
 - Mở file config:
     - Nhấn `F1`, sau đó tìm `Open Setting (JSON)`
@@ -187,14 +187,13 @@ Visual Code của bạn giờ đã sẵn sàng để sử dụng, tuy nhiên đ�
 }
 {% endraw %}
 ```
-> Tips: Các bạn có thể chỉnh sửa ở giao diện thân thiện hơn bằng cách ở bước tìm kiếm, chọn `Open Setting (UI)`. Tuy nhiên thì setting khá nhiều và bạn sẽ cần phải tìm chức năng của một config nào đó trên internet.
 
 # Step 4: Debug C++ với VSCODE: <a id = "debug"> </a>
 Bắt tay vào làm luôn thui :3
 
 * Thêm breakpoint
->**Breapoint là gì ?**\
->Breakpoint là điểm mà khi code chạy tới đấy thì chương trình dừng lại. Vậy thôi ✌️
+**Breapoint là gì ?**
+  > Breakpoint là điểm mà khi code chạy tới đấy thì chương trình dừng lại. Vậy thôi ✌️
 
 ![addbreakpoint](/images/cpp-vscode/addbreakpoint.jpg)
 * Vào mode debug
@@ -213,7 +212,7 @@ Bắt tay vào làm luôn thui :3
 
 ![debugrequire](/images/cpp-vscode/debugcontroller.jpg)
 * Debug thực sự rất tiện dành cho người mới học, tuy nhiên post này không đi sâu vào debug, nên mọi người tự tìm hiểu nhé 😄
-[Đây nhá!!!](https://viblo.asia/p/huong-dan-debug-danh-cho-nguoi-moi-eclipse-visual-studio-OeVKBWpYZkW)\
+[Đây nhá!!!](https://viblo.asia/p/huong-dan-debug-danh-cho-nguoi-moi-eclipse-visual-studio-OeVKBWpYZkW)
 
 
 **Các đường dẫn bổ sung:**
