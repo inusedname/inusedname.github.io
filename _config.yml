@@ -28,13 +28,11 @@ show_excerpts: false
 minima:
   date_format: "%b %-d, %Y"
   social_links:
-    github:  inusedname
-    facebook: two.pijama.bananas
-    linkedin: quangnviet
-    youtube_channel: UCCBSKK8JUK2ME-GwBIlNdSg
-    youtube_channel_name: Nguyen Viet Quang
+    - { platform: github,  user_url: "https://github.com/inusedname" }
+    - { platform: facebook,  user_url: "https://www.facebook.com/two.pijama.bananas/" }
+    - { platform: linkedin,  user_url: "https://www.linkedin.com/in/quangnviet/" }
+    - { platform: youtube_channel,  user_url: "https://www.youtube.com/channel/UCCBSKK8JUK2ME-GwBIlNdSg" }
   skin: myskin
-# google_analytics: G-8YTT8858SW
 # Build settings
 plugins:
   - jekyll-feed
