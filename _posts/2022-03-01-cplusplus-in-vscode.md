@@ -6,7 +6,7 @@ permalink: /gcc-vscode/
 categories: setup, basic
 ---
 
-***Bài viết được cập nhật 10/08/2022***
+***Bài viết được cập nhật 21/02/2023***
 > ## Mục lục:
 > 1. [Cài đặt trình biên dịch GCC](#setup-environment)
 >    1. [Windows](#env-windows)
@@ -14,6 +14,12 @@ categories: setup, basic
 >2. [Cài đặt và và chương trình C đầu tiên](#setup-vscode)
 >3. [Tuỳ chỉnh lại một chút cho vscode](#config-vscode)
 >4. [Nâng cao: Debug cơ bản](#debug)
+
+# Các lỗi thường gặp
+## collect2.exe: error: ld return 1 exit status
+- Cách sửa: `F1` -> `Kill All Terminals`
+- Lỗi này xảy ra khi bạn đã chạy chương trình trước đó, nhưng quên không hoàn thành chương trình hoặc không tự kết thúc seasson terminal đó (Alt F4 hoặc ấn vào dấu X trên vscode (đúng ra là phải ấn vào thùng rác))
+- Đối với Dev-C và các IDE, editor khác ngoài Vscode, bạn hãy mở Task Manager, sau đó tìm ứng dụng có tên `a.exe` hoặc một tên đáng nghi nào đó, sau đó chuột phải End Task.
 
 # Step 1: Cài đặt trình biên dịch GCC <a id = "setup-environment"></a>
 
@@ -25,15 +31,15 @@ categories: setup, basic
 
 - Chuột phải vào file tải về, chọn **Extract File**, sau đó chọn vị trí mà bạn muốn lưu thư mục mingw64
 
-|![mingw_setup_1](/images/cpp-vscode/mingw_setup_1.png)|
-|:--:|
-|*Giải nén thư mục tải về*|
-|![mingw_setup_2](/images/cpp-vscode/mingw_setup_2.png)|
-|:--:|
-|*Chọn vị trí muốn cài đặt - ở đây mình chọn* `D:\bin`|
-|![mingw_setup_3](/images/cpp-vscode/mingw_setup_3.png)|
-|:--:|
-|*Kết quả:*|
+| ![mingw_setup_1](/images/cpp-vscode/mingw_setup_1.png) |
+| :----------------------------------------------------: |
+|               *Giải nén thư mục tải về*                |
+| ![mingw_setup_2](/images/cpp-vscode/mingw_setup_2.png) |
+|                          :--:                          |
+| *Chọn vị trí muốn cài đặt - ở đây mình chọn* `D:\bin`  |
+| ![mingw_setup_3](/images/cpp-vscode/mingw_setup_3.png) |
+|                          :--:                          |
+|                       *Kết quả:*                       |
 
 - Bước tiếp theo các bạn cần báo cho máy tính của mình biết bộ dịch này được tải về rồi và nó ở chỗ nào, bằng cách thêm nó vào **Environment Variables**:
 
