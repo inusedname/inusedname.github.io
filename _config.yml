@@ -64,3 +64,8 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+include:
+# Folders with dotfiles are ignored by default.
+  - .well-known
+  - _headers
+  - _redirects
