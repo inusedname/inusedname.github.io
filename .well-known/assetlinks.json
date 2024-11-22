@@ -1,15 +1,9 @@
-[
-    {
-      "relation" : [
-        "delegate_permission/common.handle_all_urls",
-        "delegate_permission/common.get_login_creds"
-      ],
-      "target" : {
-        "namespace" : "android_app",
-        "package_name" : "com.plcoding.credentialmanagerguidecompose",
-        "sha256_cert_fingerprints" : [
-          "C6:89:5C:69:62:BA:BB:CE:F5:54:47:0E:AD:3C:CA:3D:E5:E3:B6:35:EA:83:6A:2E:AF:8F:27:FC:04:0B:A7:B5"
-        ]
-      }
-    }
-  ]
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "dev.vstd.alo",
+    "sha256_cert_fingerprints":
+    ["C5:52:FA:74:A3:18:EB:6C:C9:33:E6:B1:9A:8A:07:AE:0E:83:85:F6:4A:2B:64:56:66:72:88:D6:3A:B9:0E:E4"]
+  }
+}]
